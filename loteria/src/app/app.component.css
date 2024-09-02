@@ -1,0 +1,99 @@
+.h1 {
+    background-color: rgb(27, 225, 225);
+    color: beige;
+    padding: 2%;
+}
+
+.center {
+    text-align: center;
+}
+
+@keyframes anim {
+    0% {
+        background-color: rgba(148, 148, 186, 0.623);
+    }
+    20% {
+        background-color: pink;
+    }
+    40% {
+        background-color: rgb(138, 206, 240);
+    }
+    60% {
+        background-color: rgb(232, 196, 196);
+    }
+    80% {
+        background-color: orange;
+    }
+    100% {
+        background-color: rgba(251, 251, 186, 0.696);
+    }
+}
+
+.container {
+    animation-name: anim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.button {
+    background-color: rgb(27, 225, 225);
+    color: white;
+    padding: 1%;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 40%;
+    height: auto;
+    margin-top: 5%;
+    font-size: 2rem;
+}
+
+.jugador {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+@keyframes serpentine {
+    0% {
+        transform: rotate(0deg) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg) translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.serpentina {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: rgb(218, 30, 209);
+    border-radius: 5px;
+    opacity: 0;
+    animation: serpentine 2s linear infinite;
+    pointer-events: none;
+}
+
+.serpentina-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.h3 {
+    padding: 40%;
+    font-size: 2rem;
+    color: rgb(218, 30, 209);
+}

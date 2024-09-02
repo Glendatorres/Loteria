@@ -1,0 +1,29 @@
+<h1 class="h1 center">Lotería</h1>
+<div class="center container">
+    <app-balota [valor]="number1"></app-balota>
+    <app-balota [valor]="number2"></app-balota>
+    <app-balota [valor]="number3"></app-balota>
+    <app-balota [valor]="number4"></app-balota>
+</div>
+<div class="center">
+    <hr>
+    <button (click)="playLotery()" class="button">Sortear</button>
+    <h2>{{numberWin}}</h2>
+</div>
+<div *ngIf="ganadores.length > 0">
+    <h3>Ganadores:</h3>
+    <ul>
+        <li *ngFor="let ganador of ganadores">{{ganador}}</li>
+    </ul>
+</div>
+<div *ngIf="ganadores.length === 0">
+    <h3>No hay ganadores.</h3>
+</div>
+
+<div [ngClass]="{'hidden': !showSerpentinas}" class="serpentina-container">
+    <div class="serpentina" *ngFor="let i of [].constructor(30); let index = index" [ngStyle]="{
+           'left': (index * 3.3) + '%',
+           'animation-delay': (index * 0.1) + 's',
+           'background-color': getRandomColor()
+         }"></div>
+</div>
